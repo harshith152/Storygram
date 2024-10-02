@@ -1,0 +1,174 @@
+.bookmark-page {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 40px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: calc(100vw - 20px);
+  left: 0;
+  padding: 10px;
+}
+
+.bookmark-btn, .add-story-btn {
+  background-color: #ff7f7f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 20px;
+  opacity: 1;
+  transition: background-color 0.3s, opacity 0.3s;
+}
+
+.bookmark-btn:hover, .add-story-btn:hover {
+  background-color: #ff4d4d;
+}
+
+.profile-picture {
+  margin-right: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hamburger-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 20px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  right: 40px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  width: 150px;
+  z-index: 200;
+  text-align: center;
+}
+
+.dropdown-menu p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.logout-btn {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #ff4d4d;
+}
+
+.bookmark-heading {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 80px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.no-bookmarks {
+  font-size: 18px;
+  color: #aaa;
+  text-align: center;
+  margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  .top-box {
+    padding-right: 20px;
+    padding-left: 10px;
+    width: 100vw;
+  }
+
+  .bookmark-btn, .add-story-btn {
+    padding: 8px 15px;
+    margin-right: 10px;
+  }
+
+  .profile-picture {
+    width: 30px;
+    height: 30px;
+  }
+
+  .bookmark-heading {
+    font-size: 24px;
+  }
+
+  .story-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-box {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .bookmark-btn, .add-story-btn {
+    padding: 6px 10px;
+    margin-right: 5px;
+  }
+
+  .profile-picture {
+    width: 25px;
+    height: 25px;
+  }
+
+  .bookmark-heading {
+    font-size: 20px;
+  }
+
+  .story-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+  }
+}

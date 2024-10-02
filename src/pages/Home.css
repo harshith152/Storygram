@@ -1,0 +1,232 @@
+.home-page {
+  padding: 40px 20px;
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.home-page::-webkit-scrollbar {
+  display: none;
+}
+
+.category-filter {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+  overflow-x: auto;
+  padding: 10px 0;
+  justify-content: flex-start;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.category-filter button {
+  padding: 10px;
+  background-color: #ffffff;
+  border: 2px solid transparent;
+  border-radius: 36px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+  transition: all 0.3s ease;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  scroll-snap-align: start;
+}
+
+.category-filter button img {
+  border-radius: 36px;
+  width: 100%;
+  height: 60px;
+  object-fit: cover;
+}
+
+.category-filter button.active {
+  border-color: #3498db;
+  color: #3498db;
+}
+
+.category-filter button:hover {
+  background-color: #f2f2f2;
+}
+
+.story-heading {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: left;
+  width: 100%;
+  max-width: 1200px;
+  padding-left: 15px;
+}
+
+.no-stories {
+  color: #bbb;
+  font-size: 16px;
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 30px;
+}
+
+.story-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+}
+
+.story-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.story-card h3 {
+  font-size: 18px;
+  margin: 15px 10px 5px;
+  color: #333;
+}
+
+.story-card p {
+  font-size: 14px;
+  color: #777;
+  margin: 5px 10px 15px;
+  flex-grow: 1;
+}
+
+.see-more-btn {
+  padding: 10px 25px;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.see-more-btn:hover {
+  background-color: #ff4b4b;
+}
+
+.navbar {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.navbar button {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.navbar .register-btn {
+  background-color: #ff6b6b;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: none;
+}
+
+.navbar .login-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: none;
+}
+
+.category-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.category-item {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s;
+}
+
+.category-item.selected {
+  transform: scale(1.1);
+}
+
+.category-item:hover {
+  transform: scale(1.05);
+}
+
+.category-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.category-label {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .category-filter {
+    justify-content: center;
+    gap: 10px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+
+  .category-filter::-webkit-scrollbar {
+    display: none;
+  }
+
+  .story-heading {
+    font-size: 18px;
+    padding-left: 10px;
+  }
+}
